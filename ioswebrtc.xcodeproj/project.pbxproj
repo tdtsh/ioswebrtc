@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AC73B211C47E433D5E871AE /* Pods_ioswebrtc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8566644C0955CE90CD6C8CAA /* Pods_ioswebrtc.framework */; };
 		46DE91F2203CFAF300F31CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE91F1203CFAF300F31CDE /* AppDelegate.swift */; };
 		46DE91F4203CFAF300F31CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE91F3203CFAF300F31CDE /* ViewController.swift */; };
 		46DE91F7203CFAF300F31CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46DE91F5203CFAF300F31CDE /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		46DE91FC203CFAF300F31CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46DE91FA203CFAF300F31CDE /* LaunchScreen.storyboard */; };
 		46DE9207203CFAF300F31CDE /* ioswebrtcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE9206203CFAF300F31CDE /* ioswebrtcTests.swift */; };
 		46DE9212203CFAF300F31CDE /* ioswebrtcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE9211203CFAF300F31CDE /* ioswebrtcUITests.swift */; };
+		DCDA02561D20357459E981CD /* Pods_ioswebrtcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83CBB1756349CD0707A1B96 /* Pods_ioswebrtcUITests.framework */; };
+		EFD3E148DC2CBBC3B6AE267B /* Pods_ioswebrtcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180A5968CAA22DAB4F6D31A /* Pods_ioswebrtcTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21ABBF9F8585A3F905A7C5CB /* Pods-ioswebrtc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtc/Pods-ioswebrtc.debug.xcconfig"; sourceTree = "<group>"; };
+		4180A5968CAA22DAB4F6D31A /* Pods_ioswebrtcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioswebrtcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE91EE203CFAF300F31CDE /* ioswebrtc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ioswebrtc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE91F1203CFAF300F31CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46DE91F3203CFAF300F31CDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		46DE920D203CFAF300F31CDE /* ioswebrtcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ioswebrtcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE9211203CFAF300F31CDE /* ioswebrtcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioswebrtcUITests.swift; sourceTree = "<group>"; };
 		46DE9213203CFAF300F31CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69C25303F404D0087D834D37 /* Pods-ioswebrtcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcTests/Pods-ioswebrtcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		767BCE22281C05F7789F7224 /* Pods-ioswebrtcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		79ADE782FA3DEB97BA1941DA /* Pods-ioswebrtcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8566644C0955CE90CD6C8CAA /* Pods_ioswebrtc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioswebrtc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A83CBB1756349CD0707A1B96 /* Pods_ioswebrtcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioswebrtcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6497923F39A331168D54A4 /* Pods-ioswebrtcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcTests/Pods-ioswebrtcTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE206080AFBF7FE20B9E9140 /* Pods-ioswebrtc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtc/Pods-ioswebrtc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC73B211C47E433D5E871AE /* Pods_ioswebrtc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD3E148DC2CBBC3B6AE267B /* Pods_ioswebrtcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDA02561D20357459E981CD /* Pods_ioswebrtcUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0812F926B4F53939281BD3DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21ABBF9F8585A3F905A7C5CB /* Pods-ioswebrtc.debug.xcconfig */,
+				CE206080AFBF7FE20B9E9140 /* Pods-ioswebrtc.release.xcconfig */,
+				69C25303F404D0087D834D37 /* Pods-ioswebrtcTests.debug.xcconfig */,
+				BA6497923F39A331168D54A4 /* Pods-ioswebrtcTests.release.xcconfig */,
+				767BCE22281C05F7789F7224 /* Pods-ioswebrtcUITests.debug.xcconfig */,
+				79ADE782FA3DEB97BA1941DA /* Pods-ioswebrtcUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		46DE91E5203CFAF300F31CDE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				46DE9205203CFAF300F31CDE /* ioswebrtcTests */,
 				46DE9210203CFAF300F31CDE /* ioswebrtcUITests */,
 				46DE91EF203CFAF300F31CDE /* Products */,
+				0812F926B4F53939281BD3DF /* Pods */,
+				A0EBF44FF432C1F89B84EE4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = ioswebrtcUITests;
 			sourceTree = "<group>";
 		};
+		A0EBF44FF432C1F89B84EE4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8566644C0955CE90CD6C8CAA /* Pods_ioswebrtc.framework */,
+				4180A5968CAA22DAB4F6D31A /* Pods_ioswebrtcTests.framework */,
+				A83CBB1756349CD0707A1B96 /* Pods_ioswebrtcUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46DE9216203CFAF300F31CDE /* Build configuration list for PBXNativeTarget "ioswebrtc" */;
 			buildPhases = (
+				22C7D0816B6D7E5E704DE373 /* [CP] Check Pods Manifest.lock */,
 				46DE91EA203CFAF300F31CDE /* Sources */,
 				46DE91EB203CFAF300F31CDE /* Frameworks */,
 				46DE91EC203CFAF300F31CDE /* Resources */,
+				7E48FDC0B438D3ED79820D89 /* [CP] Embed Pods Frameworks */,
+				D753ED011E28BBE22C612579 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46DE9219203CFAF300F31CDE /* Build configuration list for PBXNativeTarget "ioswebrtcTests" */;
 			buildPhases = (
+				14CB13B9C88E33033AE9A000 /* [CP] Check Pods Manifest.lock */,
 				46DE91FE203CFAF300F31CDE /* Sources */,
 				46DE91FF203CFAF300F31CDE /* Frameworks */,
 				46DE9200203CFAF300F31CDE /* Resources */,
+				C2BE2817963AADBFD0F582E3 /* [CP] Embed Pods Frameworks */,
+				5D1445383BE66B06535A9B7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46DE921C203CFAF300F31CDE /* Build configuration list for PBXNativeTarget "ioswebrtcUITests" */;
 			buildPhases = (
+				2A146409C559AC23A1C24B86 /* [CP] Check Pods Manifest.lock */,
 				46DE9209203CFAF300F31CDE /* Sources */,
 				46DE920A203CFAF300F31CDE /* Frameworks */,
 				46DE920B203CFAF300F31CDE /* Resources */,
+				0B3B14AA7C1EBB13C7ADC27B /* [CP] Embed Pods Frameworks */,
+				E23BEFFA3BCEFFE9318F478F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +242,7 @@
 				TargetAttributes = {
 					46DE91ED203CFAF300F31CDE = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					46DE9201203CFAF300F31CDE = {
 						CreatedOnToolsVersion = 9.2;
@@ -253,6 +302,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B3B14AA7C1EBB13C7ADC27B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14CB13B9C88E33033AE9A000 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22C7D0816B6D7E5E704DE373 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2A146409C559AC23A1C24B86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1445383BE66B06535A9B7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtcTests/Pods-ioswebrtcTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E48FDC0B438D3ED79820D89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtc/Pods-ioswebrtc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2BE2817963AADBFD0F582E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtcTests/Pods-ioswebrtcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D753ED011E28BBE22C612579 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtc/Pods-ioswebrtc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E23BEFFA3BCEFFE9318F478F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46DE91EA203CFAF300F31CDE /* Sources */ = {
@@ -424,13 +611,17 @@
 		};
 		46DE9217203CFAF300F31CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21ABBF9F8585A3F905A7C5CB /* Pods-ioswebrtc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q7EHW7YA74;
 				INFOPLIST_FILE = ioswebrtc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tdtsh.app.ios.ioswebrtc.ioswebrtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "534e7b02-eaf2-416e-9d0b-c081c5a41e8e";
+				PROVISIONING_PROFILE_SPECIFIER = "For Debug";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,13 +629,18 @@
 		};
 		46DE9218203CFAF300F31CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE206080AFBF7FE20B9E9140 /* Pods-ioswebrtc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q7EHW7YA74;
 				INFOPLIST_FILE = ioswebrtc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tdtsh.app.ios.ioswebrtc.ioswebrtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ef4bff07-6de0-44e6-bf37-9dd79dcb2c8f";
+				PROVISIONING_PROFILE_SPECIFIER = Adhoc_Wildcard;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +648,7 @@
 		};
 		46DE921A203CFAF300F31CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C25303F404D0087D834D37 /* Pods-ioswebrtcTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +665,7 @@
 		};
 		46DE921B203CFAF300F31CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6497923F39A331168D54A4 /* Pods-ioswebrtcTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +682,7 @@
 		};
 		46DE921D203CFAF300F31CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 767BCE22281C05F7789F7224 /* Pods-ioswebrtcUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +698,7 @@
 		};
 		46DE921E203CFAF300F31CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79ADE782FA3DEB97BA1941DA /* Pods-ioswebrtcUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
