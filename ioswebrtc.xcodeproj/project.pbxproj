@@ -15,6 +15,7 @@
 		46DE91FC203CFAF300F31CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46DE91FA203CFAF300F31CDE /* LaunchScreen.storyboard */; };
 		46DE9207203CFAF300F31CDE /* ioswebrtcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE9206203CFAF300F31CDE /* ioswebrtcTests.swift */; };
 		46DE9212203CFAF300F31CDE /* ioswebrtcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE9211203CFAF300F31CDE /* ioswebrtcUITests.swift */; };
+		46EB03FD2048278700EEDC4E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB03FC2048278700EEDC4E /* DetailViewController.swift */; };
 		DCDA02561D20357459E981CD /* Pods_ioswebrtcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83CBB1756349CD0707A1B96 /* Pods_ioswebrtcUITests.framework */; };
 		EFD3E148DC2CBBC3B6AE267B /* Pods_ioswebrtcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180A5968CAA22DAB4F6D31A /* Pods_ioswebrtcTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		46DE920D203CFAF300F31CDE /* ioswebrtcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ioswebrtcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DE9211203CFAF300F31CDE /* ioswebrtcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioswebrtcUITests.swift; sourceTree = "<group>"; };
 		46DE9213203CFAF300F31CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46EB03FC2048278700EEDC4E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69C25303F404D0087D834D37 /* Pods-ioswebrtcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcTests/Pods-ioswebrtcTests.debug.xcconfig"; sourceTree = "<group>"; };
 		767BCE22281C05F7789F7224 /* Pods-ioswebrtcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79ADE782FA3DEB97BA1941DA /* Pods-ioswebrtcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswebrtcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ioswebrtcUITests/Pods-ioswebrtcUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				46DE91F8203CFAF300F31CDE /* Assets.xcassets */,
 				46DE91FA203CFAF300F31CDE /* LaunchScreen.storyboard */,
 				46DE91FD203CFAF300F31CDE /* Info.plist */,
+				46EB03FC2048278700EEDC4E /* DetailViewController.swift */,
 			);
 			path = ioswebrtc;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EB03FD2048278700EEDC4E /* DetailViewController.swift in Sources */,
 				46DE91F4203CFAF300F31CDE /* ViewController.swift in Sources */,
 				46DE91F2203CFAF300F31CDE /* AppDelegate.swift in Sources */,
 			);
