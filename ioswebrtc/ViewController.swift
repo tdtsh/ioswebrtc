@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     // ナビゲーションタイトルの色を変更
     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
+    // 背景をダークグレーに
+    self.view.backgroundColor = UIColor.darkGray
+
+
     renderView()
   }
 
@@ -46,7 +50,7 @@ class ViewController: UIViewController {
 
     // 配置
     buttonEnter.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height - 55)
-    
+
     buttonEnter.addTarget(self, action: #selector(self.enterRoom), for: .touchUpInside)
     self.view.addSubview(buttonEnter)
   }
