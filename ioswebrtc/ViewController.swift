@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     // 背景をダークグレーに
     self.view.backgroundColor = UIColor.darkGray
 
-
     renderView()
   }
 
