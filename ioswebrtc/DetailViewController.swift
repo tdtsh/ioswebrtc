@@ -15,6 +15,10 @@ class DetailViewController: UIViewController {
 
     // 背景をダークグレーに
     self.view.backgroundColor = UIColor.darkGray
+
+    // ナビゲーションのタイトル変更
+    self.navigationItem.title = "iOS WebRTC detail"
+
   }
 
   override func didReceiveMemoryWarning() {
