@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
+
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    print("Root:", #function, #line, "start")
 
     // ナビゲーションのタイトル変更
     self.navigationItem.title = "iOS WebRTC main"
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
 
   // Viewを描画する
   func renderView() {
-    print("Master:", #function, #line, "start")
+    print("Root:", #function, #line, "start")
 
     // ボタン作成
     let buttonEnter = UIButton(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width - 100, height: 50))
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
 
   // DetailControllerを開く
   @objc func enterRoom(_ sender: UIButton) {
-    print("Master:", #function, #line, "start")
+    print("Root:", #function, #line, "start")
 
     // DetailControllerの戻るボタン
     let _backItem = UIBarButtonItem()
