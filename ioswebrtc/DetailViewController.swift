@@ -36,6 +36,7 @@ class DetailViewController: UIViewController {
     buttonConnect.layer.masksToBounds = true
     buttonConnect.setTitle("Connect", for: UIControlState.normal)
     buttonConnect.layer.position = CGPoint(x: self.view.bounds.width/4, y:self.view.bounds.height - 60)
+    buttonConnect.addTarget(self, action: #selector(self.connect), for: .touchUpInside)
     self.view.addSubview(buttonConnect)
 
     // Hangupボタン作成
@@ -45,7 +46,18 @@ class DetailViewController: UIViewController {
     buttonHangup.layer.masksToBounds = true
     buttonHangup.setTitle("Hangup", for: UIControlState.normal)
     buttonHangup.layer.position = CGPoint(x: (self.view.bounds.width/4)*3, y:self.view.bounds.height - 60)
+    buttonHangup.addTarget(self, action: #selector(self.hangup), for: .touchUpInside)
     self.view.addSubview(buttonHangup)
+  }
+
+  // 通話を開始する
+  @objc func connect(_ sender: UIButton) {
+    print("Detail:", #function, #line, "start")
+  }
+
+  // 通話を終了する
+  @objc func hangup(_ sender: UIButton) {
+    print("Detail:", #function, #line, "start")
   }
 
   override func didReceiveMemoryWarning() {
