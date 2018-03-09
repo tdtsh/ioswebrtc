@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import WebRTC
 
 class DetailViewController: UIViewController {
+
+  var remoteVideoView: RTCEAGLVideoView!
 
   override func viewDidLoad() {
 
@@ -28,6 +31,10 @@ class DetailViewController: UIViewController {
   // Viewを描画する
   func renderView() {
     print("Detail:", #function, #line, "start")
+
+    // VideoViewを生成
+    remoteVideoView = RTCEAGLVideoView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+    self.view.addSubview(remoteVideoView)
 
     // Connectボタン作成
     let buttonConnect = UIButton(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width / 3, height: 50))
