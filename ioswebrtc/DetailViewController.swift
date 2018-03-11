@@ -12,6 +12,7 @@ import WebRTC
 class DetailViewController: UIViewController {
 
   var remoteVideoView: RTCEAGLVideoView!
+  var cameraPreview: RTCCameraPreviewView!
 
   override func viewDidLoad() {
 
