@@ -36,6 +36,11 @@ class DetailViewController: UIViewController {
     // VideoViewを生成
     remoteVideoView = RTCEAGLVideoView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
     self.view.addSubview(remoteVideoView)
+    
+    // プレビューを作成
+    cameraPreview = RTCCameraPreviewView.init(frame: CGRect.init(x: self.view.frame.width - 120, y: 84, width: 100, height: 100))
+    cameraPreview.backgroundColor = UIColor.gray
+    self.view.addSubview(cameraPreview)
 
     // Connectボタン作成
     let buttonConnect = UIButton(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width / 3, height: 50))
