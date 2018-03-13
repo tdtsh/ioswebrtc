@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     // VideoViewを生成
     remoteVideoView = RTCEAGLVideoView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
     self.view.addSubview(remoteVideoView)
-    
+
     // プレビューを作成
     cameraPreview = RTCCameraPreviewView.init(frame: CGRect.init(x: self.view.frame.width - 120, y: 84, width: 100, height: 100))
     cameraPreview.backgroundColor = UIColor.gray
@@ -71,6 +71,10 @@ class DetailViewController: UIViewController {
   // 通話を終了する
   @objc func hangup(_ sender: UIButton) {
     print("Detail:", #function, #line, "start")
+
+    // 戻る
+    self.navigationController!.popViewController(animated: true)
+    self.dismiss(animated: true, completion: nil)
   }
 
   override func didReceiveMemoryWarning() {
