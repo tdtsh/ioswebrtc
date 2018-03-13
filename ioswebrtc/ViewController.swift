@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Starscream
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WebSocketDelegate {
 
+  var socket: WebSocket! = nil
+  
   override func viewDidLoad() {
 
     super.viewDidLoad()
@@ -75,5 +78,22 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  func websocketDidConnect(socket: WebSocketClient) {
+    print("Root:", #function, #line, "start")
+  }
+  
+  func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+    print("Root:", #function, #line, "error: \(String(describing: error?.localizedDescription))")
+    // LOG("error: \(String(describing: error?.localizedDescription))")
+  }
 
+  func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+    print("Root:", #function, #line, "message: \(text)")
+  }
+  
+  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+    //
+    print("Root:", #function, #line, "data: \(data.count)")
+  }
+  
 }
