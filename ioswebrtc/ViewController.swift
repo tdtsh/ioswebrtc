@@ -7,16 +7,20 @@
 //
 
 import UIKit
-import Starscream
 
-class ViewController: UIViewController, WebSocketDelegate {
+class ViewController: UIViewController {
 
-  var socket: WebSocket! = nil
-  
   override func viewDidLoad() {
 
     super.viewDidLoad()
 
+    print("Root:", #function, #line, "start")
+
+    renderView()
+  }
+
+  // Viewを描画する
+  func renderView() {
     print("Root:", #function, #line, "start")
 
     // ナビゲーションのタイトル変更
@@ -33,13 +37,6 @@ class ViewController: UIViewController, WebSocketDelegate {
 
     // 背景をダークグレーに
     self.view.backgroundColor = UIColor.darkGray
-
-    renderView()
-  }
-
-  // Viewを描画する
-  func renderView() {
-    print("Root:", #function, #line, "start")
 
     // ボタン作成
     let buttonEnter = UIButton(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width - 100, height: 50))
@@ -78,22 +75,4 @@ class ViewController: UIViewController, WebSocketDelegate {
     // Dispose of any resources that can be recreated.
   }
 
-  func websocketDidConnect(socket: WebSocketClient) {
-    print("Root:", #function, #line, "start")
-  }
-  
-  func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-    print("Root:", #function, #line, "error: \(String(describing: error?.localizedDescription))")
-    // LOG("error: \(String(describing: error?.localizedDescription))")
-  }
-
-  func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-    print("Root:", #function, #line, "message: \(text)")
-  }
-  
-  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-    //
-    print("Root:", #function, #line, "data: \(data.count)")
-  }
-  
 }
