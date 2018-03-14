@@ -1,0 +1,15 @@
+{
+  "name": "simple singaling server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tdtsh <systemsfaling@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^5.0.0"
+  }
+}
