@@ -8,8 +8,11 @@
 
 import UIKit
 import WebRTC
+import Starscream
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, WebSocketDelegate {
+
+  var socket: WebSocket! = nil
 
   var remoteVideoView: RTCEAGLVideoView!
   var cameraPreview: RTCCameraPreviewView!
@@ -27,6 +30,16 @@ class DetailViewController: UIViewController {
     self.navigationItem.title = "iOS WebRTC detail"
 
     renderView()
+
+    initWS()
+  }
+
+  // WebScoketサーバに接続する
+  func initWS() {
+    print("Detail:", #function, #line, "start")
+    socket = WebSocket(url: URL(string: "ws://localhost:4000/")!)
+    socket.delegate = self
+    socket.connect()
   }
 
   // Viewを描画する
@@ -72,13 +85,34 @@ class DetailViewController: UIViewController {
   @objc func hangup(_ sender: UIButton) {
     print("Detail:", #function, #line, "start")
 
+    socket.disconnect()
+
     // 戻る
     self.navigationController!.popViewController(animated: true)
     self.dismiss(animated: true, completion: nil)
+
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+
+  func websocketDidConnect(socket: WebSocketClient) {
+    print("Detail:", #function, #line, "start")
+  }
+
+  func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+    print("Detail:", #function, #line, "error: \(String(describing: error?.localizedDescription))")
+    // LOG("error: \(String(describing: error?.localizedDescription))")
+  }
+
+  func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+    print("Detail:", #function, #line, "message: \(text)")
+  }
+
+  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+    //
+    print("Detail:", #function, #line, "data: \(data.count)")
   }
 
 }
