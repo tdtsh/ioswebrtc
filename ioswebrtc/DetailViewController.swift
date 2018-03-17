@@ -16,6 +16,10 @@ class DetailViewController: UIViewController, WebSocketDelegate {
 
   var remoteVideoView: RTCEAGLVideoView!
   var cameraPreview: RTCCameraPreviewView!
+  
+  var peerConnectionFactory: RTCPeerConnectionFactory! = nil
+  var audioSource: RTCAudioSource?
+  var videoSource: RTCAVFoundationVideoSource?
 
   override func viewDidLoad() {
 
