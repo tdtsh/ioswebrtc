@@ -34,6 +34,8 @@ class DetailViewController: UIViewController, WebSocketDelegate {
     self.navigationItem.title = "iOS WebRTC detail"
 
     renderView()
+    
+    startVideo()
 
     initWS()
   }
@@ -41,9 +43,29 @@ class DetailViewController: UIViewController, WebSocketDelegate {
   // WebScoketサーバに接続する
   func initWS() {
     print("Detail:", #function, #line, "start")
+    
+    peerConnectionFactory = RTCPeerConnectionFactory()
+
+    // websocket初期化
     socket = WebSocket(url: URL(string: "ws://localhost:4000/")!)
     socket.delegate = self
     socket.connect()
+  }
+  
+  // 映像配信を開始する
+  func startVideo() {
+    print("Detail:", #function, #line, "start")
+    
+    // 音声ソース
+    let audioSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+    audioSource = peerConnectionFactory.audioSource(with: audioSourceConstraints)
+    
+    // 映像ソース
+    let videoSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+    videoSource = peerConnectionFactory.avFoundationVideoSource(with: videoSourceConstraints)
+    
+    // 映像ソースをプレビューに設定
+    cameraPreview.captureSession = videoSource?.captureSession
   }
 
   // Viewを描画する
@@ -99,6 +121,12 @@ class DetailViewController: UIViewController, WebSocketDelegate {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  deinit {
+    audioSource = nil
+    videoSource = nil
+    peerConnectionFactory = nil
   }
 
   func websocketDidConnect(socket: WebSocketClient) {
