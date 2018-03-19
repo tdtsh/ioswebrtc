@@ -10,7 +10,7 @@ import UIKit
 import WebRTC
 import Starscream
 
-class DetailViewController: UIViewController, WebSocketDelegate {
+class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnectionDelegate {
 
   var socket: WebSocket! = nil
 
@@ -129,6 +129,9 @@ class DetailViewController: UIViewController, WebSocketDelegate {
     peerConnectionFactory = nil
   }
 
+  /**************************************************/
+  /* Websocket                                      */
+  /**************************************************/
   func websocketDidConnect(socket: WebSocketClient) {
     print("Detail:", #function, #line, "start")
   }
@@ -143,8 +146,55 @@ class DetailViewController: UIViewController, WebSocketDelegate {
   }
 
   func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-    //
     print("Detail:", #function, #line, "data: \(data.count)")
   }
 
+  /**************************************************/
+  /* WebRTC                                         */
+  /**************************************************/
+  // 接続情報交換の状況が変化した
+  func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {
+    print("Detail:", #function, #line, "start")
+  }
+
+  // 映像/音声streamが追加された
+  func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // 映像/音声streamが削除された
+  func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // 接続情報の交換が必要になった
+  func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // PeerConnectionの接続状況が変化した
+  func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // 接続先候補の探索状況が変化した
+  func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // Candidate(自分への接続先候補情報)が生成された
+  func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
+    print("Detail:", #function, #line, "start")
+  }
+
+  // DataChannelが作られた
+  func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
+    print("Detail:", #function, #line, "start")
+  }
+  
+  // Candidateが削除された
+  func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {
+    print("Detail:", #function, #line, "start")
+  }
+  
 }
