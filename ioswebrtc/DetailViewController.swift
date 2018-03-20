@@ -59,15 +59,20 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
     // 音声ソース
     let audioSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
     audioSource = peerConnectionFactory.audioSource(with: audioSourceConstraints)
-    
+
     // 映像ソース
     let videoSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
     videoSource = peerConnectionFactory.avFoundationVideoSource(with: videoSourceConstraints)
-    
+
     // 映像ソースをプレビューに設定
     cameraPreview.captureSession = videoSource?.captureSession
   }
 
+  
+  //RTCPeerConnectionの作成
+  func prepareNewConnection() -> RTCPeerConnection {
+    print("Detail:", #function, #line, "start")
+  }
   // Viewを描画する
   func renderView() {
     print("Detail:", #function, #line, "start")
