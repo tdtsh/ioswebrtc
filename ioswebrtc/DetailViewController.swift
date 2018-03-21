@@ -70,9 +70,10 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
 
   
   //RTCPeerConnectionの作成
-  func prepareNewConnection() -> RTCPeerConnection {
+  /*func prepareNewConnection() -> RTCPeerConnection {
     print("Detail:", #function, #line, "start")
-  }
+  }*/
+  
   // Viewを描画する
   func renderView() {
     print("Detail:", #function, #line, "start")
