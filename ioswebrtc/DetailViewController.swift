@@ -14,12 +14,12 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
 
   var socket: WebSocket! = nil
 
-  var remoteVideoView: RTCEAGLVideoView!
-  var cameraPreview: RTCCameraPreviewView!
-  
   var peerConnectionFactory: RTCPeerConnectionFactory! = nil
   var audioSource: RTCAudioSource?
   var videoSource: RTCAVFoundationVideoSource?
+
+  var cameraPreview: RTCCameraPreviewView!
+  var remoteVideoView: RTCEAGLVideoView!
 
   override func viewDidLoad() {
 
@@ -34,7 +34,9 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
     self.navigationItem.title = "iOS WebRTC detail"
 
     renderView()
-    
+
+    peerConnectionFactory = RTCPeerConnectionFactory()
+
     startVideo()
 
     initWS()
@@ -43,19 +45,17 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   // WebScoketサーバに接続する
   func initWS() {
     print("Detail:", #function, #line, "start")
-    
-    peerConnectionFactory = RTCPeerConnectionFactory()
 
     // websocket初期化
     socket = WebSocket(url: URL(string: "ws://localhost:4000/")!)
     socket.delegate = self
     socket.connect()
   }
-  
+
   // 映像配信を開始する
   func startVideo() {
     print("Detail:", #function, #line, "start")
-    
+
     // 音声ソース
     let audioSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
     audioSource = peerConnectionFactory.audioSource(with: audioSourceConstraints)
@@ -68,12 +68,12 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
     cameraPreview.captureSession = videoSource?.captureSession
   }
 
-  
+
   //RTCPeerConnectionの作成
   /*func prepareNewConnection() -> RTCPeerConnection {
     print("Detail:", #function, #line, "start")
   }*/
-  
+
   // Viewを描画する
   func renderView() {
     print("Detail:", #function, #line, "start")
@@ -128,7 +128,7 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
+
   deinit {
     audioSource = nil
     videoSource = nil
@@ -167,27 +167,27 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // 映像/音声streamが削除された
   func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // 接続情報の交換が必要になった
   func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // PeerConnectionの接続状況が変化した
   func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // 接続先候補の探索状況が変化した
   func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // Candidate(自分への接続先候補情報)が生成された
   func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
     print("Detail:", #function, #line, "start")
@@ -197,10 +197,10 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
     print("Detail:", #function, #line, "start")
   }
-  
+
   // Candidateが削除された
   func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {
     print("Detail:", #function, #line, "start")
   }
-  
+
 }
