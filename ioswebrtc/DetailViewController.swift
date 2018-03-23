@@ -131,6 +131,9 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   }
 
   deinit {
+    if peerConnection != nil {
+        hangup()
+    }
     audioSource = nil
     videoSource = nil
     peerConnectionFactory = nil
