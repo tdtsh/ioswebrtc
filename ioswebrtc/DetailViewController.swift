@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   var socket: WebSocket! = nil
 
   var peerConnectionFactory: RTCPeerConnectionFactory! = nil
+  var peerConnection: RTCPeerConnection! = nil
   var audioSource: RTCAudioSource?
   var videoSource: RTCAVFoundationVideoSource?
 
@@ -70,7 +71,7 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
 
 
   //RTCPeerConnectionの作成
-  /*func prepareNewConnection() -> RTCPeerConnection {
+  func prepareNewConnection() -> RTCPeerConnection {
     print("Detail:", #function, #line, "start")
   }*/
 
