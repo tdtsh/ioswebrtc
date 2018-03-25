@@ -128,25 +128,43 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
     buttonHangup.layer.masksToBounds = true
     buttonHangup.setTitle("Hangup", for: UIControlState.normal)
     buttonHangup.layer.position = CGPoint(x: (self.view.bounds.width/4)*3, y:self.view.bounds.height - 60)
-    buttonHangup.addTarget(self, action: #selector(self.hangup), for: .touchUpInside)
+    buttonHangup.addTarget(self, action: #selector(self.hangupButtonAction), for: .touchUpInside)
     self.view.addSubview(buttonHangup)
   }
 
   // 通話を開始する
   @objc func connect(_ sender: UIButton) {
     print("Detail:", #function, #line, "start")
+    if peerConnection == nil {
+      peerConnection = prepareNewConnection()
+    }
   }
 
   // 通話を終了する
-  @objc func hangup(_ sender: UIButton) {
+  @objc func hangupButtonAction(_ sender: UIButton) {
+    print("Detail:", #function, #line, "start")
+    hangup()
+  }
+
+  func hangup() {
     print("Detail:", #function, #line, "start")
 
     socket.disconnect()
+    if peerConnection != nil {
+        if peerConnection.iceConnectionState != RTCIceConnectionState.closed {
+            peerConnection.close()
+        }
+        peerConnection = nil
+        print("Detail:", #function, #line, "peerConnection closed")
+    }
 
+    leave()
+  }
+
+  func leave() {
     // 戻る
     self.navigationController!.popViewController(animated: true)
     self.dismiss(animated: true, completion: nil)
-
   }
 
   override func didReceiveMemoryWarning() {
