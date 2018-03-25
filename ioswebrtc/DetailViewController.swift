@@ -73,7 +73,30 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
   //RTCPeerConnectionの作成
   func prepareNewConnection() -> RTCPeerConnection {
     print("Detail:", #function, #line, "start")
-  }*/
+    // STUN/TURN　設定
+    let configuration = RTCConfiguration()
+    configuration.iceServers = [RTCIceServer.init(urlStrings: ["stun:stun.l.google.com:19302"])]
+
+    // PeerConnection設定
+    let peerConnectionConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+
+    // PeerConnectionの初期化
+    let peerConnection = peerConnectionFactory.peerConnection(with: configuration, constraints: peerConnectionConstraints, delegate: self)
+
+    // 音声トラックの作成
+    let localAudioTrack = peerConnectionFactory.audioTrack(with: audioSource!, trackId: "testa0")
+    // PeerConnectionからSenderを作成
+    let audioSender = peerConnection.sender(withKind: kRTCMediaStreamTrackKindAudio, streamId: "test")
+    audioSender.track = localAudioTrack
+
+    // 映像トラックの作成
+    let localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource!, trackId: "testv0")
+    // PeerConnectionからVideoのSenderを作成
+    let videoSender = peerConnection.sender(withKind: kRTCMediaStreamTrackKindVideo, streamId: "test")
+    videoSender.track = localVideoTrack
+
+    return peerConnection
+  }
 
   // Viewを描画する
   func renderView() {
