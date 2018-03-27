@@ -48,7 +48,8 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
     print("Detail:", #function, #line, "start")
 
     // websocket初期化
-    socket = WebSocket(url: URL(string: "ws://172.16.1.10:4000/")!)
+    //socket = WebSocket(url: URL(string: "ws://172.16.1.10:4000/")!)
+    socket = WebSocket(url: URL(string: "ws://simplesingalingserver-spuwvkveth.now.sh")!)
     socket.delegate = self
     socket.connect()
   }
