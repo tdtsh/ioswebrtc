@@ -10,6 +10,10 @@
   "author": "tdtsh <systemsfaling@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ect": "^0.5.9",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.4",
     "ws": "^5.0.0"
   }
 }
