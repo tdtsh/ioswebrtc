@@ -18,23 +18,6 @@ const routes = require('./routes/index');
 app.use('/', routes);
 
 const port = 4000;
-/*const WebSocketServer = require('ws').Server;
-const wsServer = new WebSocketServer({
-  port: port
-});
-
-wsServer.on('connection', (ws) => {
-  console.log('connected');
-  ws.on('message', (message) => {
-    wsServer.clients.forEach((client) => {
-      if (ws === client) {
-        console.log('skip');
-      } else {
-        client.send(message);
-      }
-    });
-  });
-});*/
 
 console.log(`server started. port:${port}`);
 const server = app.listen(port, () => {
@@ -44,6 +27,8 @@ const server = app.listen(port, () => {
 const io = require('socket.io')(server);
 io.sockets.on('connection', (socket) => {
   console.log('connected');
+  socket.emit('CONNECTED');
+  socket.broadcast.emit(message);
   socket.on('message', (message) => {
     socket.broadcast.emit('message'. message);
   });
