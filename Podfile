@@ -6,12 +6,10 @@ target 'ioswebrtc' do
   use_frameworks!
 
   # Pods for ioswebrtc
-  # pod 'WebRTC', '58.17.16937'
   pod 'WebRTC', '63.11.20455'
-  # pod 'Starscream', '~> 2.0.3'
   pod 'Starscream', '~> 3.0.4'
-  # pod 'SwiftyJSON'
   pod 'SwiftyJSON', '4.0.0'
+  pod 'Socket.IO-Client-Swift', '~> 13.1.1'
 
   target 'ioswebrtcTests' do
     inherit! :search_paths

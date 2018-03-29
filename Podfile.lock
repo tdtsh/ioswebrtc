@@ -1,18 +1,22 @@
 PODS:
+  - Socket.IO-Client-Swift (13.1.1):
+    - Starscream (~> 3.0.2)
   - Starscream (3.0.4)
   - SwiftyJSON (4.0.0)
   - WebRTC (63.11.20455)
 
 DEPENDENCIES:
+  - Socket.IO-Client-Swift (~> 13.1.1)
   - Starscream (~> 3.0.4)
   - SwiftyJSON (= 4.0.0)
   - WebRTC (= 63.11.20455)
 
 SPEC CHECKSUMS:
+  Socket.IO-Client-Swift: f22222913f29801e30ae0df712db663ec096edc2
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   WebRTC: f2a6203584745fe53532633397557876b5d71640
 
-PODFILE CHECKSUM: 9e86d3b5d21728d63bed2c10e473e8b56f32a633
+PODFILE CHECKSUM: 5ac70e88755c2f40f01c525b584fe4af887f40ab
 
 COCOAPODS: 1.2.1
