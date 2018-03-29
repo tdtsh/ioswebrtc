@@ -28,8 +28,8 @@ const io = require('socket.io')(server);
 io.sockets.on('connection', (socket) => {
   console.log('connected');
   socket.emit('CONNECTED');
-  socket.broadcast.emit(message);
   socket.on('message', (message) => {
-    socket.broadcast.emit('message'. message);
+    console.log('on message %o', message);
+    socket.broadcast.emit('sdp', message);
   });
 });
