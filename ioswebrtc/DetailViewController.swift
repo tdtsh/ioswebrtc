@@ -49,9 +49,13 @@ class DetailViewController: UIViewController, WebSocketDelegate, RTCPeerConnecti
 
     // websocket初期化
     //socket = WebSocket(url: URL(string: "ws://172.16.1.10:4000/")!)
-    socket = WebSocket(url: URL(string: "ws://simplesingalingserver-spuwvkveth.now.sh")!)
+    socket = WebSocket(url: URL(string: "ws://localhost:4000/")!)
+    //socket = WebSocket(url: URL(string: "ws://simplesingalingserver-spuwvkveth.now.sh")!)
     socket.delegate = self
     socket.connect()
+    socket.onConnect = {
+      print("Detail:", #function, #line, "oncoonect")
+    }
   }
 
   // 映像配信を開始する
