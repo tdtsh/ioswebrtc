@@ -29,7 +29,6 @@ io.sockets.on('connection', (socket) => {
   console.log('connected');
 
   socket.emit('CONNECTED');
-  let clients = io.sockets.sockets;
 
   socket.on('message', (message) => {
     console.log('on message %o', message);
